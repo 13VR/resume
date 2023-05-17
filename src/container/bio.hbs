@@ -1,0 +1,111 @@
+<div>
+  <main>
+    <section>
+      <h1>The biografy of - <cite>{{name}}</cite></h1>
+      <hr />
+      <br />
+      <div>
+        (<time>{{birthdate}}</time>
+        in
+        {{birthplace}}
+        -
+        <time>{{deathdate}}</time><br /><br />
+        {{deathdate}}) -
+        {{nationality}}
+        {{occupation}}        
+        laureate of the
+          <br /><br />{{#each awards}}
+          {{title}} in <time>{{year}}</time> for
+          <br /><br /> <cite>{{description}}</cite>.        
+          <br><br>
+          {{/each}}
+          <div><b>Most famous discovery:</b>
+          <br /><br />{{#each major_discoveries}}
+          {{title}} in <time>{{year}}</time> for
+          <br /><br /> <cite>{{description}}</cite>. 
+          {{/each}}
+          </div>
+          <br>
+          <br>
+          <div>Was married:
+            {{#each partners}}
+            <ul>
+              <li>
+                <b>{{relationship}}</b>: {{name}} ({{years}})
+              </li>
+            </ul>
+            {{/each}}
+          </div>
+      </div>
+      <br>
+
+      <div>
+        <em>Was known for:</em>
+        {{#each known_for}}
+          <ul>
+            <li>
+              {{this}}
+            </li>
+          </ul>
+        {{/each}}
+      </div>
+    </section>
+    <hr />
+    <br />
+    <siction>
+      {{#each education}}
+        <details open>
+          <summary><u>Education</u></summary><br />
+          <div>University:
+            <cite>{{institution}}</cite></div>
+          <br />
+          <div>Speciality: <em>{{field}}</em></div><br />
+          <div>Degree: <em>{{degree}}</em></div><br />
+          <div>Year of graduation:
+            <time datatime='1905'>{{year}}</time>
+          </div>
+          <br>
+          <br>
+        {{/each}}
+        <div><b>His publications</b></div><br>
+          {{#each notable_publications}}
+            <ul>
+              <li>
+                <cite>{{title}}</cite>
+                Published by:
+                {{publisher}}
+                in
+                <time datatime="'1905">{{year}}</time>
+              </li>
+            </ul>
+          {{/each}}
+          <br>
+          <br>
+          <div><u>He had an influence on such well-known scientists as:</u></div>
+          {{#each influences}}
+          <ul>
+            <li>{{this}}</li>
+          </ul>
+          {{/each}}
+          <div><u>Got under the influence:</u></div>
+          {{#each influenced}}
+          <ul>
+            <li>{{this}}</li>
+          </ul>
+          {{/each}}
+          <div>
+            <strong>Most famous quotes:</strong>
+            <ul>
+              {{#each quotes}}
+              <li>
+                <q>{{this}}</q>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </details>
+      
+
+    </siction>
+  </main>
+</div>
