@@ -1,0 +1,89 @@
+<div>
+  <main>
+    <section>
+      {{#with program}}
+        {{#with excursion}}
+          <h1>Excursion aroud France</h1>
+          <h2>We offer you: <em>{{name}}</em></h2>
+          <div>
+            <b>
+              Which will be held in {{location.city}} - capital of {{location.country}} 
+              <time datatime="2023-06-15">{{date}}</time>
+              </b>
+          </div>
+          <br>
+          <div><u>Program will consist of:</u></div>
+          {{#each program}}
+            <ul>
+              <li>
+                <h3>{{name}} ({{type}})</h3>
+                <div>Which will include {{duration}} locations </div> 
+                <br>
+                {{#with details}}
+                  <ul>
+                    <li>We will visit
+                      {{#with museum}}
+                        <cite>{{name}}</cite>: {{location.country}}, {{location.city}}, {{location.address}}
+                        <br><br>
+                        <div>Where we will find such fomous works as:</div>
+                        <br>              
+                        <ul>
+                          {{#each exhibits}}
+                          <li>
+                            <cite>{{name}}</cite>
+                            {{#if artist}}
+                              by: <cite>{{artist}}</cite>
+                            {{/if}}
+                            <div>{{description}}</div>
+                            <br>
+                            <div><b>Guide:</b></div>
+                          <div>
+                              {{#if audio_guide}}
+                                Name:{{../../guide.name}}
+                                <div>Language: {{../../guide.language}}</div>
+                                <div>Raiting:<meter min="0" max="5" value={{../../guide.rating}}></meter></div>
+                              {{/if}}
+                            </div>
+                          </li>
+                          <br>
+                          {{/each}}
+                          <br>
+                        </ul>
+                        <hr>
+                      
+                      {{/with}}
+                      {{#with venue}}
+                        <cite>{{name}}</cite>: {{location.country}}, {{location.city}}, {{location.address}}
+                      {{/with}}
+                        <br>
+                        <br>
+                      {{#each performers}}
+                        <ul>                     
+                          <li>                  
+                                <div>Name: {{name}}</div>  
+                                <div>Type: {{type}}</div>                
+                            
+                              <br>
+                            <div><b>Guide:</b></div>
+                            <div>                      
+                                Name:{{../guide.name}}
+                                <div>Language: {{../guide.language}}</div>
+                                <div>Raiting:<meter min="0" max="5" value={{../guide.rating}}></meter></div>                      
+                            </div>                             
+                            
+                          </li> 
+                          <br>                       
+                        </ul>  
+                      {{/each}}                                  
+                      
+                    </li>            
+                  </ul>
+                {{/with}}       
+              </li>
+            </ul>
+          {{/each}}
+        {{/with}}
+      {{/with}}
+    </siction>    
+  </main>  
+</div>
