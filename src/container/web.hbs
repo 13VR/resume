@@ -1,0 +1,48 @@
+<div>
+  <main>
+    <h1>During the year I'll learn such languages:</h1>
+    {{#with web}}
+      {{#each languages}}
+
+        <div>
+          <ul>
+            <li>{{> web }}
+              <br><br>
+              <ul>
+                {{#each elements}}
+                <li> {{> web}} </li><br>                  
+                  <ul>
+                    {{#each attributes}}
+                      <li> {{> web}} </li>
+                      <br>
+                    {{/each}}
+                  </ul>                  
+                {{/each}} top
+                {{#each properties}}
+                <li> {{> web}} </li><br>                  
+                  <ul>
+                    {{#each values}}
+                      <li> {{> web name=value}} </li>
+                      <br>
+                    {{/each}}
+                  </ul>                  
+                {{/each}}
+                {{#each functions}}
+                <li> {{> web}} </li><br>                  
+                  <ul>
+                    {{#each parameters}}
+                      <li> {{> web version=type}} </li>
+                      <br>
+                    {{/each}}
+                  </ul>                  
+                {{/each}} 
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      {{/each}}
+    {{/with}}
+
+  </main>
+</div>
