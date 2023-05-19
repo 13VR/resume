@@ -1,5 +1,102 @@
 <div>
   <main>
-    Hello
+    <div class='card mb-3' style='max-width: 656px;'>
+      <div class='row g-0'>
+        <div class='col-md-4'>
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png'
+            class='img-fluid rounded-start'
+            alt='Java Script'
+          />
+        </div>
+        <div class='col-md-8'>
+          <div class='card-body'>
+            <h5 class='card-title'>{{name}}</h5>
+            <p class='card-text'>{{description}}
+              {{#with history}}
+                Was founded by:
+                {{founder}}
+                in
+                {{year}}
+              {{/with}}             
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div>
+    {{#each types}}
+      <span class="badge text-bg-primary" style='min-width: 89px;'>{{this}}</span>
+    {{/each}}
+    </div>
+    <br>
+    <br>
+    <div>
+    {{#with syntax}}
+      <table class="table table-bordered"><h2>Syntax</h2>       
+        <thead>
+          <tr>
+            <th scope="col">Variables:</th>
+            {{> table data=variables}}
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <th scope="row">Functions:</th>
+            <td colspan="3">{{functions}}</td>      
+          </tr>
+          <tr>
+            <th scope="row">Conditionals:</th>
+            {{>table data=conditionals}}
+          </tr>
+          <tr>
+            <th scope="row">Loops</th>
+            {{> table data=loops}}
+          </tr>
+          <tr>
+            <th scope="row">Classes:</th>
+            <td colspan="3">{{classes}}</td>      
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    {{/with}}
+    <br>
+    <div>
+      <ul>
+        <h2>Features:</h2>
+        {{#each features}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <br>
+    <div>
+    <h2>Libraries:</h2>
+    {{#each libraries}}
+    <span class="badge text-bg-success" style='min-width: 77px;'>{{this}}</span>
+    {{/each}}
+    </div>
+    <br><hr>
+    <h2>Tools:</h2>
+    {{#each libraries}}
+    <span class="badge text-bg-danger" style='min-width: 77px;'>{{this}}</span>
+    {{/each}}
+    </div>
+    <div>  
+      <section>
+        <h2>Community:</h2>     
+        {{#each community}}
+        <table class="table table-bordered">      
+          <thead>
+            <tr>
+              <th scope="col">{{name}}</th>
+              <th scope="row">{{type}}</th>
+            </tr>
+          </thead>        
+        </table>
+        {{/each}}
+      </section>
+    </div>
   </main>
 </div>
