@@ -1,0 +1,92 @@
+<div>
+  <nav
+    style="--bs-breadcrumb-divider: '>';"
+    aria-label='breadcrumb'
+  >
+    <ol class='breadcrumb'>
+      <li class='breadcrumb-item'><a href='#'>Home</a></li>
+      <li
+        class='breadcrumb-item active'
+        aria-current='page'
+      >{{category}}</li>
+    </ol>
+  </nav>
+  <div>
+  <section>
+      <div>
+        <h1><span
+            class='badge bg-secondary'
+          >{{name}}</span></h1>    
+      </div>
+      <div>    
+        <h2><span
+            class='badge bg-secondary'
+          >{{description}}</span></h2> 
+      </div>
+      <div><h3>Price - <span class="badge text-bg-success">{{price}} $</span></h3></div>
+  </section> 
+  <main>
+    <hr>
+  {{#with features}}
+    {{#with processor}}
+        <div><em>Processor:</em>   {{brand}}, {{model}}, {{speed}}, cores - {{cores}}, RAM - {{cache}}       
+        </div>
+    {{/with}}
+    <br>
+    {{#with memory}}
+        <div><em>Memory:</em>   {{type}}, {{size}}, {{speed}}       
+        </div>
+    {{/with}}
+    <br>
+    {{#with storage}}
+        <div><em>Storage:</em>   {{type}}, {{size}}
+        </div>
+    {{/with}}
+    <br>
+    {{#with display}}
+        <div><em>Display:</em>   {{technology}}, {{size}}, {{resolution}}, color space - {{color_space}}, brightness - {{brightness}}, refresh - {{refresh_rate}}       
+        </div>
+    {{/with}}
+    <br>
+    {{#with graphics}}
+        <div><em>Graphics:</em>   {{brand}}, {{madel}}, {{memory}}
+        </div>
+    {{/with}}
+    <br>
+    <div><em>Ports:</em> 
+    {{#each ports}}         
+      <ul>
+        <li>{{type}} - {{count}}</li>
+          <ul>
+            {{#each features}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+      </ul> 
+    {{/each}}          
+    </div>
+    {{#with battery}}
+        <div><em>Battery:</em>   {{type}}, {{capacity}}, {{life}}
+        </div>
+    {{/with}}
+    <br>
+    <div><em>Dimensions:</em>  ({{weight}})
+    {{#with dimensions}}
+           {{height}} x {{width}} x {{depth}}
+        </div>
+    {{/with}}
+    <br>
+    <div><em>Operating system:</em>   <b>{{operating_system}}</b></div>
+    <div>
+      <br>
+      <div>Accessories:</div>
+    {{#each accessories}}
+      <ul>
+        <li>{{name}} - {{price}}$</li>
+      </ul>
+    {{/each}}
+    </div>  
+  {{/with}}
+  </main>
+</div>
+
