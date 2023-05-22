@@ -1115,9 +1115,6 @@ router.get('/bootstrap', function (req, res) {
   })
 })
 
-
-
-
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
@@ -1180,7 +1177,6 @@ router.get('/task22', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 // Підключаємо роутер до бек-енду
 
@@ -1254,5 +1250,14 @@ router.get('/task21', function (req, res) {
 })
 
 // ================================================================
+
+router.get('/bootstrapNew', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrapNew', {
+    layout: 'basic',
+  })
+})
 
 module.exports = router
