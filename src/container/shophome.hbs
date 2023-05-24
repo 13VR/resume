@@ -124,16 +124,16 @@
     </div>
   {{/with}}
   <hr class='m-5' />
-  <section class='row col-12'>
+  <section class='row '>
     {{#each footer}}
-      <div class='col-12'>
+      <div class='col-2'>
 
-        <ul class='row'>
+        <ul >
           {{#each this}}
-            <div class='col-3'>
+            <div class='col-2'>
               <a
                 href='{{link}}'
-                class='btn btn-link'
+                class='btn btn-link {{#if @last}}disabled{{/if}}'
               >{{text}}</a>
             </div>
           {{/each}}
