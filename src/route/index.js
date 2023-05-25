@@ -1814,4 +1814,13 @@ router.get('/shophome', function (req, res) {
 
 // ================================================================
 
+router.get('/cards', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('cards', {
+    layout: 'basic',
+  })
+})
+
 module.exports = router
