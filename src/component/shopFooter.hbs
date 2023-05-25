@@ -1,0 +1,18 @@
+	<hr class='m-5' />
+ <section class='row '>
+    {{#each footer}}
+      <div class='col-2'>
+
+        <ul >
+          {{#each this}}
+            <div class='col-2'>
+              <a
+                href='{{link}}'
+                class='btn btn-link {{#if @last}}disabled{{/if}}'
+              >{{text}}</a>
+            </div>
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+ </section>
