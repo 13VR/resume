@@ -2206,5 +2206,13 @@ router.get('/shoporder', function (req, res) {
 })
 
 // ================================================================
+router.get('/styleCSS', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('styleCSS', {
+    layout: 'basic',
+  })
+})
 
 module.exports = router

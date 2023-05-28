@@ -1,0 +1,17 @@
+<hr class='my-5' />
+<div class='alert text-bg-dark'>
+  {{#with subscribe}}
+    <h2>{{header}}</h2>
+    <p>{{description}}</p>
+    {{#each buttons}}
+      <div>
+        <a
+          href='{{link}}'
+          class='btn btn-primary my-2'
+          target='_blank'
+        >{{text}}</a>
+      </div>
+    {{/each}}
+  {{/with}}
+</div>
+<hr class='my-5' />
