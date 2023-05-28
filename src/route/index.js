@@ -2749,4 +2749,13 @@ router.get('/shopreview', function (req, res) {
 
 // ================================================================
 
+router.get('/index8', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    layout: 'index',
+  })
+})
+
 module.exports = router
