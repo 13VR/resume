@@ -1,0 +1,15 @@
+<div class='nav nav-tabs mb-5'>
+  {{#each tabs}}
+    <div class='nav-item mx-3'>
+      {{#if isActive}}
+        <a href='#' class='active nav-link'>{{text}}</a>
+      {{else}}
+        {{#if isDisabled}}
+          <a href='#' class='disabled nav-link'>{{text}}</a>
+        {{else}}
+          <a href='#' class='nav-link'>{{text}}</a>
+        {{/if}}
+      {{/if}}
+    </div>
+  {{/each}}
+</div>
